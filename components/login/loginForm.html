@@ -1,0 +1,9 @@
+<div class="modal-dialog">
+	<div class="col-sm-6 col-sm-offset-4">
+	<center><h3>User Login</h3></center>
+		<div ng-show="alertLoginError" class="alert alert-danger"> {{loginErrrMsg}}!</div>
+		    <dynamic-form form="entity" send="submit(data,spin)" alert="change()" spinner="spinner"></dynamic-form>
+		    <a ui-sref="register" class="pull-right padding">New User</a>
+	</div>
+</div>
+   

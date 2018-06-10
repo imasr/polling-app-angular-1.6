@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Polling App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+    <script type="text/javascript" src="index.routes.js"></script>
+    <script type="text/javascript" src="dirPagination.js"></script>
+    <script data-require="ui-bootstrap@*" data-semver="0.12.1" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.1.min.js"></script>
+    <script type="text/javascript" src="common/ajaxRequest.factory.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-resource.min.js"></script>
+    <script type="text/javascript" src="components/registration/registrationController.js"></script>
+    <script type="text/javascript" src="components/login/loginController.js"></script>
+    <script type="text/javascript" src="components/createPoll/createPollController.js"></script>
+    <script type="text/javascript" src="components/viewPoll/viewPollController.js"></script>
+    <script type="text/javascript" src="components/takePoll/takePollController.js"></script>
+    <script type="text/javascript" src="components/viewVote/voteSummaryController.js"></script>
+    <script type="text/javascript" src="index.constant.js"></script>
+    <link rel="stylesheet" type="text/css" href="common/styles.css">
+    <script type="text/javascript" src="templateController.js"></script>
+    <script type="text/javascript" src="run.js"></script>
+    <script type="text/javascript" src="components/dynamicForm/dynamicFormDirective.js"></script>
+    
+
+
+    
+</head>
+
+<body ng-app="angularForm">
+    <div class="container">
+        <div ui-view></div>
+    </div>
+</body>
+
+</html>
+

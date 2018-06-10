@@ -1,0 +1,39 @@
+<div class="col-sm-6 col-sm-offset-4">
+    <center>
+        <h4 ng-hide="paginAlert" style="padding-top: 10px;"><b>Take Poll</b></h4>
+    </center>
+    <table class="table" dir-paginate="data in record | itemsPerPage:1">
+        <tr>
+            <td colspan="2" class="success"><b>Question. &nbsp;</b>{{data.title}} </td>
+        </tr>
+        <tr class="active">
+            <td>
+                <input type="radio" name="Vote" ng-model="option" value="{{data.options[0].option}}" unchecked>&nbsp;{{data.options[0].option}}
+            <td>
+        </tr>
+        <tr class="active">
+            <td>
+                <input type="radio" name="Vote" ng-model="option" value="{{data.options[1].option}}" unchecked>&nbsp;{{data.options[1].option}}
+            <td>
+        </tr>
+        <tr class="active">
+           <td>
+                <input type="radio" name="Vote" ng-model="option" value="{{data.options[2].option}}" unchecked>&nbsp;{{data.options[2].option}}
+            <td>
+        </tr>
+        <tr class="active">
+            <td>
+                <input type="radio" name="Vote" ng-model="option" value="{{data.options[3].option}}" unchecked>&nbsp;{{data.options[3].option}}
+            <td>
+        </tr>
+        <tr>
+            <td>
+                <button class="btn btn-primary" type="" ="submit" value="Submit" ng-click="submitVote(option,data)" ng-disabled="!option">Submit &nbsp;<span ng-show="loadingVote"><i class="glyphicon glyphicon-refresh spinning"></i></span></button>
+            </td>
+        </tr>                    
+    </table>
+    <center>
+        <dir-pagination-controls ng-hide="paginAlert" ></dir-pagination-controls>
+    </center>
+    <div ng-show="recordAlert" class="alert-danger">No more Polls Found</div>
+</div>

@@ -1,0 +1,17 @@
+<div ng-controller="templateController" >
+
+	<div id="mySidenav" class="sidenav" ng-class="{'toggleRight':sidebar,'toggleLeft':!sidebar}">
+		<ul >
+			<li class="side" ng-class="{ Active: isActive('/menuTemplate/createPoll')}"><a ui-sref="menuTemplate.createPoll">Create Poll</a></li>
+			<li class="side"class="side" ng-class="{ Active: isActive('/menuTemplate/viewPoll')}"><a ui-sref="menuTemplate.viewPoll">View Poll</a></li>
+			<li ng-class="{ Active: isActive('/menuTemplate/takePoll')}"><a ui-sref="menuTemplate.takePoll">Take Poll</a></li>
+			<li class="side" ><a ng-click="logout()">Log Out</a></li>
+		</ul>
+	</div>
+
+	<div class="col-md-10" id="main" ng-class="{'collapseRight':sidebar,'collapseLeft':!sidebar}">
+		<button id="menu" ng-click="toggleNav()">&#9776; Menu</button><br><br>
+		<div ui-view ></div>
+	</div>	
+
+</div>

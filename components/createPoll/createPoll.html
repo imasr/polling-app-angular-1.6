@@ -1,0 +1,10 @@
+<div class="col-sm-6 col-sm-offset-4"> 
+    <center>
+        <h3>Create New Poll</h3>
+    </center>
+    <div ng-show="alertSuccess" class="alert alert-success">New Poll created!</div>
+    <div ng-show="alertError" class="alert alert-danger"> {{errorMsg}}</div>
+    <dynamic-form form="entity" send="submit(data,spin)" alert="change()" spinner="spinner"></dynamic-form>
+    
+</div>
+

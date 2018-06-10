@@ -1,0 +1,32 @@
+<div class="col-sm-6 col-sm-offset-4">
+    <center>
+    <h3><b>Poll Summary</b></h3></center>
+    <table class="table">
+        <tr>
+            <td colspan="2"  class="success"><b>Question. &nbsp;</b>{{data.title}} </td>
+        </tr>
+        <tr class="info">
+            <th class="col-sm-8">Options</th>
+            <th class="col-sm-4">Total no. of Votes</th>
+        </tr>
+        <tr class="active">
+            <td><b>A.</b> &nbsp;{{data.options[0].option}}</td>
+            <td>{{data.options[0].vote}}</td>
+        </tr>
+        <tr class="active">
+            <td><b>B.</b> &nbsp;{{data.options[1].option}}</td>
+            <td>{{data.options[1].vote}}</td>
+        </tr>
+        <tr class="active">
+            <td><b>C.</b> &nbsp;{{data.options[2].option}}</td>
+            <td>{{data.options[2].vote}}</td>
+        </tr>
+        <tr class="active">
+            <td><b>D.</b> &nbsp;{{data.options[3].option}}</td>
+            <td>{{data.options[3].vote}}</td>
+        </tr>
+    </table>
+    <center>
+        <button class="back"><a ui-sref="menuTemplate.takePoll">Back to Vote</a> </button>
+    </center>
+</div>         

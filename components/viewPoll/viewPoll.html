@@ -1,0 +1,38 @@
+<div class="col-sm-6 col-sm-offset-4">
+    <center>
+        <h4 style="padding-top: 10px;"><b>View Poll Data</b></h4>
+    </center>
+    <table class="table" dir-paginate="data in record | itemsPerPage:2">
+        <tr>
+            <td colspan="2"  class="success"><b>Question. &nbsp;</b>{{data.title}}
+                <p ng-show="showDeleteBtn"><a ng-click="delete(data)"><span class="glyphicon glyphicon-trash"></span></a></p>
+            </td>
+        </tr>
+        <tr class="info">
+            <th class="col-sm-9">Options</th>
+            <th class="col-sm-3">Votes</th>
+        </tr>
+        <tr class="active">
+            <td><b>A.</b> &nbsp;{{data.options[0].option}}</td>
+            <td>{{data.options[0].vote}}</td>
+        </tr>
+        <tr class="active">
+            <td><b>B.</b> &nbsp;{{data.options[1].option}}</td>
+            <td>{{data.options[1].vote}}</td>
+        </tr>
+        <tr class="active">
+            <td><b>C.</b> &nbsp;{{data.options[2].option}}</td>
+            <td>{{data.options[2].vote}}</td>
+        </tr>
+        <tr class="active">
+            <td><b>D.</b> &nbsp;{{data.options[3].option}}</td>
+            <td>{{data.options[3].vote}}</td>
+        </tr>
+    </table>
+    <center>
+        <dir-pagination-controls></dir-pagination-controls>
+    </center>
+</div>		
+        
+ <style>
+   </style>

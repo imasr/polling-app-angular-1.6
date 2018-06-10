@@ -1,0 +1,26 @@
+<form name="myForm" ng-submit="submit()" novalidate>
+<div ng-repeat="field in form.fields">    
+    <!-- TEXT FIELDS -->        
+    <div ng-if="field.type=='text'" class="form-group" ng-class="{ 'has-error' : form.{{field.name}}.$invalid && !form.{{field.name}}.$pristine }">
+        <label for="text">{{field.label}}</label>
+            <input type="{{ field.type }}" name="{{field.name}}" ng-model="field.data" class="form-control" ng-change="change()" required>
+        <span ng-show="form.{{field.name}}.$dirty && form.{{field.name}}.$error.required" class="help-block">Plz enter {{field.label}}!</span>
+    </div>
+    <!-- PASSWORD FIELD -->
+    <div ng-if="field.type=='password'" class="form-group" ng-class="{ 'has-error' : form.{{field.name}}.$invalid && !form.{{field.name}}.$pristine }" >
+        <label for="password">{{field.label}}</label>
+            <input type="{{ field.type }}" name="{{field.name}}" ng-model="field.data" ng-minlength={{field.min}} ng-maxlength={{field.max}} class="form-control" ng-change="change()"  required>
+        <span ng-show="form.{{field.name}}.$dirty && form.{{field.name}}.$error.required" class="help-block">Plz enter {{field.label}}!</span>
+        <span ng-show="!form.{{field.name}}.required && (form.{{field.name}}.$error.minlength || form.{{field.name}}.$error.maxlength)" class="help-block">Passwords must be between 6 and 20 characters.</span>
+    </div>
+    <!-- DROPDOWN FIELD -->
+    <div ng-if="field.type=='select'" class="form-group" ng-class="{ 'has-error' : form.{{field.name}}.$invalid && !form.{{field.name}}.$pristine }">
+        <label for="role">{{field.label}}</label>           
+            <select class="form-control" name="{{field.name}}" ng-model="field.data"  ng-options="option.name for option in field.options" required></select >
+        <span ng-show="form.{{field.name}}.$dirty && form.{{field.name}}.$error.required" class="help-block">Please enter Your {{field.label}}!</span>
+    </div>
+</div>
+    <br/>
+        <button type="submit" class="btn btn-success" ng-disabled="myForm.$invalid">{{form.button}} &nbsp;<span ng-show="spinner"><i class="glyphicon glyphicon-refresh spinning"></i></span></button>
+    <br/>
+</form>
